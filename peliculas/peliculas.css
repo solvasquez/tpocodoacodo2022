@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url(./fonts/Rubik-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'BluuNext-Bold';
+    src: url(./fonts/BluuNext-Bold.woff2) format('woff2');
+}
+
+
+
+html {
+    font-size: 1rem;
+    height: 100%;
+    /*que todo el doc html aplique ese tamaño y 
+     la altura sea el 100% de su contenedor */
+    min-width: none;
+    /* acá podría decirle que no se achique menos de tantos
+     px, al achicar la pantalla */
+
+}
+
+
+main{
+    /* width: 90%; */
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content:space-around;
+    align-items: stretch;
+    flex-direction: row;
+}
+
+.tarjeta{
+    border: 2px solid #a0d4a6;
+    width: 20rem;
+    height: 30rem;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.tarjeta:hover{
+    width: 25rem;
+    height: 
+    
+    35rem;
+    margin: 15px;
+    
+}
+
+.tarjeta p{
+    width: 160px;
+    height: 50px;
+    align-self: center;
+    text-align: center;
+}
+
+.tarjeta a{
+    text-decoration: none;
+    padding: 5px 15px;
+    align-self: center;
+    background-color:#a0d4a6 ;
+    margin: 10px;
+}
+
+/* footer{
+    width: 100%;
+    height: 100%;
+    background-color: #add9e6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    border: 2px solid red;
+}
+
+footer div{
+    display: flex;
+}
+
+footer h2{
+    color:white;
+    margin: 25px;
+}
+footer p{
+    color:white;
+    align-self: center;
+    
+} */
+
+
+footer {
+    border: 3px skyblue solid;
+    min-height: 50px;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+

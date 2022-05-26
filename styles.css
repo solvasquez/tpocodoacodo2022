@@ -1,0 +1,115 @@
+
+
+
+h3 {
+    font-family: 'BluuNext-Bold';
+    font-size: 1.8em;
+}
+
+
+/* main>div {
+    min-height: 180;
+    margin: 1rem;
+    border: 2px violet solid; */
+/* se puede referenciar el div también de esta forma por
+    ser hijo directo del main */
+
+.contenido-principal {
+    min-height: 50px;
+    margin: 0.5rem;
+    border: 2px violet solid;
+    height: auto;
+    float: left;
+    width: 80vw;
+    min-width: 65vmin;
+    flex: 5;
+    box-sizing: border-box;
+    /* flex-wrap: wrap; */
+    /* display: flex; */
+    
+}
+
+.secciones {
+    min-height: 50px;
+    margin: 0.5rem;
+    border: 2px orange solid;
+    padding: 1rem;
+
+}
+
+.articulos {
+    min-height: 20px;
+    margin: 0.30rem;
+    border: 1px green dotted;
+    padding: 0.5rem;
+    overflow: auto;
+
+}
+
+.texto-lateral {
+    min-height: 50px;
+    margin: 0.5rem;
+    border: 2px cornflowerblue solid;
+    padding: 1rem;
+    min-width: 25%;
+    width: 20vw;
+    flex: 1;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+
+}
+
+#foto-principal {
+    width: 100%;
+
+}
+
+.titulos {
+    font-family: 'BluuNext-Bold';
+
+}
+
+
+
+iframe {
+    height: 30vw;
+}
+
+footer {
+    border: 3px skyblue solid;
+    min-height: 50px;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+#starwarspicture, #milliebobbypicture, #jasonsudeikis, #potterseries, #hogwartslegacy   {
+    width: 100%;
+
+
+}
+
+.seccioneslaterales {
+    
+    flex-direction: column;
+    justify-content: flex-start;
+    
+          
+}
+
+#articulopartido {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+.subarticulo {
+    flex: 1;
+    padding: 1rem;
+    
+
+
+}

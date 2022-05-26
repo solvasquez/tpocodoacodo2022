@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./peliculas.css">
+    <link rel="stylesheet" href="../global.css">
+    <title>Document</title>
+
+</head>
+<link rel="icon" href="/imagenes/icon-wand.png" type="image/png" />
+
+
+<body>
+    <header>
+        <div class="logo-de-mi-pagina">
+            <a href="/index.html">
+                <img src="/imagenes/Logo lujoso vintage dorado azul.jpg" alt="logo" width="100" height="100">
+            </a>
+        </div>
+        <nav class="header-menubar">
+            <!-- importante ver que queda la clase adentro de la etiqueta de apertura
+            nav -->
+
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="index.html">Películas</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="suscripcion.html">Suscripción</a></li>
+                <li><a href="merchandising.html">Merchandising</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <form id="formulario" action="Miapi.com" method="post" onsubmit="return validForm()">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" autofocus title="Nombre" placeholder="Ingresá tu nombre">
+            <label id="nombreError"></label><br>
+
+            <label for="apellido">Apellido: </label>
+            <input type="text" name="apellido" id="apellido" placeholder="Ingresá tu apellido" title="Apellido"> <label
+                id="apellidoError"></label><br>
+
+
+            <label for="mail">E-mail:</label>
+            <input type="email" name="mail" id="mail" placeholder="Ingresá tu dirección de E-mail" title="E-mail">
+            <label id="mailError"></label><br>
+
+            <label for="usuario">Usuario: </label>
+            <input type="text" name="usuario" id="usuario" placeholder="Ingresá un nombre de usuario" title="Usuario">
+            <label id="usuarioError"></label><br>
+
+
+            <label for="contraseña">Contraseña</label>
+            <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingresá una contraseña"
+                title="Contraseña"> <label id="contraseniaError"></label>
+            <br>
+
+
+
+
+            <input type="submit" value="Enviar los datos" onclick="EnviarFormulario">
+            <input type="reset" value="Borrar">
+
+
+        </form>
+
+        <script>
+
+
+
+
+            function fullFields() {
+                let resultado = true;
+
+                const formulario = document.getElementById('formulario')
+
+                for (let element of formulario.children) {
+
+                    if (element.nodeName != 'INPUT') {
+                        continue
+                    }
+                    if (element.attributes.type.value === 'submit' || element.attributes.type.value === 'reset') {
+                        continue
+                    }
+
+                    if (element.value.length == 0) {
+                        const id = element.attributes.id.value
+                        document.getElementById(id + 'Error').innerHTML = 'Por favor, complete el campo'
+                        element.focus()
+                        resultado = false
+
+                    }
+                }
+
+                // const nombre = document.getElementById("nombre").value;
+                // if (nombre.length == 0) {
+                //     document.getElementById("mensaje").innerHTML = "Por favor, completá este campo";
+                //     document.getElementById('nombre').focus();
+                //     resultado = false;
+                // }
+
+                // const apellido = document.getElementById("apellido").value;
+                // if (apellido.length == 0) {
+                //     document.getElementById("mensaje2").innerHTML = "Por favor, completá este campo";
+                //     document.getElementById('apellido').focus();
+                //     resultado = false;
+                // }
+
+                // const mail = document.getElementById("mail").value;
+                // if (mail.length == 0) {
+                //     document.getElementById("mensaje3").innerHTML = "Por favor, completá este campo";
+                //     document.getElementById('mail').focus();
+                //     resultado = false;
+                // }
+
+                // const usuario = document.getElementById("usuario").value;
+                // if (usuario.length == 0) {
+                //     document.getElementById("mensaje4").innerHTML = "Por favor, completá este campo";
+                //     document.getElementById('usuario').focus();
+                //     resultado = false;
+                // }
+
+                // const contraseña = document.getElementById("contraseña").value;
+                // if (contraseña.length == 0) {
+                //     document.getElementById("mensaje5").innerHTML = "Por favor, completá este campo";
+                //     document.getElementById('contraseña').focus();
+                //     resultado = false;
+                // }
+
+                return resultado
+            }
+
+            const expressionMatch = () => {
+
+                let resultado = true
+
+                const regExp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+                const mail = document.getElementById('mail').value
+
+                if (!mail.toLowerCase().match(regExp)) {
+                    resultado = false
+                    document.getElementById("mailError").innerHTML = "Formato de email no válido";
+                }
+
+                return resultado
+            }
+
+            const 
+
+            const validForm = () => {
+                return fullFields() && expressionMatch()
+            }
+
+
+
+            // if (condition) 
+            // false = false
+            // null = false
+            // 0 = false
+            // undefined = false
+            // '' = false // '' <> ' '
+
+            // -1  .  (x) = -x
+            // ! true = false
+            // ! false = true
+
+            // 5 es diferente de '5' o "5"
+            // 5 === '5' || "5" = false
+            // 5 == '5' || "5" = true 
+        </script>
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+
+nav{
+    display: flex;
+    justify-content:space-around;
+    display: flex;
+
+}
+
+/* nav img{
+    width: 50px;
+    height: 50px;
+} */
+
+
+
+
+nav li{
+    text-decoration: none;
+    padding: 20px;
+    display:inline-block;
+    align-items: center;
+    display: inline-block;
+    overflow: auto;
+   
+}
+
+nav a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+
+nav a:hover{
+    background-color: whitesmoke;
+}
+
+header{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    /* background-color: goldenrod; */
+    background-image: url(/imagenes/LOCOS\ POR\ EL\ CINE\ \(2\).jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+
+
+
+
+header h1{
+    text-align: center;
+    color: white;
+    justify-self:center center;
+    display: inline;
+    white-space: nowrap;
+    justify-content: center;
+    
+    
+    
+    
+   
+}
+
+
+nav, header {
+    font-family: 'BluuNext-Bold', 'Rubik', sans-serif, Verdana;
+}
+
+
+
+
+
+/* .header-menubar {
+    margin: 0.5rem 0 0.5rem 1rem;
+    overflow: auto;
+    left: auto;
+    position: relative;
+    top: auto;
+    width: auto;
+    display: inline-block;
+    align-self: center;
+    /* son elementos en bloque pero se comportan como en linea */
+    
+
+/* }
+
+
+.header-menubar ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px 60px;
+
+    /* acá saqué los puntitos de los items de la lista, pero solo en las listas que estén
+ dentro de una clase menú  */
+
+/*     
+}
+
+
+.header-menubar li {  
+    float: left;
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem;
+    margin: 5px 0 5px 0; */ */ */
+
+
+/* la lista es por naturaleza un elemento en bloque, al poner asi cada nuevo elemento
+    se va a ir posicionando a la izquierda en vez de seguir su naturaleza */
+
+/* } */
+
+/* nav a {
+    text-decoration: none;
+    color: mediumpurple;
+    background-color: mediumaquamarine;
+    padding: 1rem;
+    border-radius: 20px;
+    /* margin-right: 2rem; */
+    
+/* }
+
+nav a:hover{
+    background-color: goldenrod;
+    color: purple;
+}
+
+
+.logo-de-mi-pagina {
+    width: auto;
+    display: inline-block;
+    margin: 0.5rem;
+    
+    
+}
+
+body,
+header,
+main,
+footer {
+    border: 3px skyblue solid;
+    min-height: 50px;
+    margin: 1rem;
+    padding: 0.5rem;
+} */ */
+
+/* header {
+    background: palegoldenrod;
+    box-shadow: 0px 0px 50px grey;
+    display: flex;
+    
+} */
+
+
+body {
+    background-color: whitesmoke;
+    font-family: 'Rubik', sans-serif, Verdana, Geneva;
+
+}
+
+
+@font-face {
+    font-family: 'Rubik';
+    src: url(./fonts/Rubik-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'BluuNext-Bold';
+    src: url(./fonts/BluuNext-Bold.woff2) format('woff2');
+}
+
+
+html {
+    font-size: 1rem;
+    height: 100%;
+    /*que todo el doc html aplique ese tamaño y 
+     la altura sea el 100% de su contenedor */
+    min-width: none;
+    /* acá podría decirle que no se achique menos de tantos
+     px, al achicar la pantalla */
+
+}
+
+
+
+
+main {
+    min-height: 200px;
+    overflow: auto;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: antiquewhite;
+    display: flex;
+    flex-wrap: wrap;
+}
