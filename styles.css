@@ -6,7 +6,7 @@ h3 {
     font-size: 1.8em;
 }
 
-
+ 
 /* main>div {
     min-height: 180;
     margin: 1rem;
@@ -17,7 +17,7 @@ h3 {
 .contenido-principal {
     min-height: 50px;
     margin: 0.5rem;
-    border: 2px violet solid;
+    /* border: 2px violet solid; */
     height: auto;
     float: left;
     width: 80vw;
@@ -32,7 +32,7 @@ h3 {
 .secciones {
     min-height: 50px;
     margin: 0.5rem;
-    border: 2px orange solid;
+    /* border: 2px orange solid; */
     padding: 1rem;
 
 }
@@ -40,7 +40,7 @@ h3 {
 .articulos {
     min-height: 20px;
     margin: 0.30rem;
-    border: 1px green dotted;
+    /* border: 1px green dotted; */
     padding: 0.5rem;
     overflow: auto;
 
@@ -49,7 +49,7 @@ h3 {
 .texto-lateral {
     min-height: 50px;
     margin: 0.5rem;
-    border: 2px cornflowerblue solid;
+    /* border: 2px cornflowerblue solid; */
     padding: 1rem;
     min-width: 25%;
     width: 20vw;
@@ -79,7 +79,7 @@ iframe {
 }
 
 footer {
-    border: 3px skyblue solid;
+    /* border: 3px skyblue solid; */
     min-height: 50px;
     margin: 1rem;
     padding: 0.5rem;
@@ -109,7 +109,20 @@ footer {
 .subarticulo {
     flex: 1;
     padding: 1rem;
-    
+
+}
+
+form {
+    font-family:'BluuNext-Bold';
+    font-size: 1rem;
+}
+
+
+#botonform {
+    font-family:'BluuNext-Bold';
+    background-color: #876093;
+    border-radius: 20px;
+    color: white;
 
 
 }

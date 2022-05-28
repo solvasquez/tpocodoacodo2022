@@ -32,21 +32,24 @@ main{
 }
 
 .tarjeta{
-    border: 2px solid #a0d4a6;
+    border: 2px solid #0f0f0f;
     width: 20rem;
     height: 30rem;
     margin: 20px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    
+
+    
+    
 }
 
 .tarjeta:hover{
     width: 25rem;
-    height: 
-    
-    35rem;
+    height:35rem;
     margin: 15px;
+    
     
 }
 
@@ -55,14 +58,32 @@ main{
     height: 50px;
     align-self: center;
     text-align: center;
+    margin:0px;
+    white-space: nowrap;
+    font-family: "BluuNext-Bold";
+   
 }
 
 .tarjeta a{
     text-decoration: none;
     padding: 5px 15px;
     align-self: center;
-    background-color:#a0d4a6 ;
-    margin: 10px;
+    background-color:#876093 ;
+    margin: -24px;
+    border-radius: 20px;
+    color: white;
+    font-family: "BluuNext-Bold";
+}
+
+.tarjeta img {
+    
+    height: 80%;
+    width: 90%;
+    align-self: center;
+    padding: 1rem;
+   
+
+
 }
 
 /* footer{

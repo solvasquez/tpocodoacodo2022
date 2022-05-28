@@ -28,7 +28,7 @@
 
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
-                        <li><a href="./peliculas">Películas</a></li>
+                        <li><a href="./peliculas">Películas en cartelera</a></li>
                         <li><a href="noticias.html">Noticias</a></li>
                         <li><a href="./suscripcion/suscripcion.html">Suscripción</a></li>
                         <li><a href="merchandising.html">Merchandising</a></li>
@@ -36,10 +36,6 @@
 
 
 
-                <!-- <a href="">Inicio</a>
-                <a href="">Películas en cartelera</a>
-                <a href="">Noticias</a>
-                <a href="">Suscripción</a> -->
                 
          </strong>
         </nav>
@@ -110,7 +106,7 @@
                     </div>
 
 
-                    
+                     
 
                 </article>
 
@@ -162,9 +158,59 @@
         </section>
        
 
-        <section>
+        <section class="seccioneslaterales">
             <h6 class="titulos"> Jason Sudeikis será un nuevo superhéroe de DC</h6>
             <img src="./imagenes/JasonSudeikis.jpg" alt="Jason Sudeikis DC" id="jasonsudeikis">
+
+
+        </section>
+
+        <section class="seccioneslaterales">
+
+            <h3>¡Ayudanos a decidirnos!</h3>
+            
+        
+            <form name="Encuesta" action="Miapi.html" onsubmit="return validacion();">
+                
+                <label>¿Cuál de los siguientes films te gustaría que sea portada de nuestra próxima revista?</label><br><br>
+                <input type="radio" id="DoctorStrange2" name="película"> <label id="doctorstrange">Doctor Strange 2</label><br>
+                <input type="radio" id="Animales fantásticos3" name="pelicula"> <label id="animalesfantasticos">Animales fantásticos 3</label><br>
+                <input type="radio" id="Aquaman2" name="pelicula"> <label id="aquaman">Aquaman 2</label><br>
+                <input type="radio" id="LosCuatroFantásticos" name="pelicula"> <label id="4fantasticos">Los cuatro fantásticos: El regreso</label><br>
+                
+                <label id="mensaje"></label><br><br>
+                
+                <input type="submit" value="Enviar" id="botonform">
+                
+            </form>
+        
+            <script>
+                function validacion() 
+                {
+                    
+                    opciones = document.getElementsByName("pelicula");
+        
+                    var seleccionado = false;
+                    for(var i=0; i < opciones.length; i++) 
+                    {
+                        if(opciones[i].checked) 
+                        {
+                            seleccionado = true;
+                            break;
+                        }
+                    }
+        
+                    if(!seleccionado) 
+                    {
+                        document.getElementById('mensaje').innerHTML = "Por favor, seleccionar una película" ;
+                        return false;
+                    }
+                    
+                    
+                    return true;          
+                }
+            </script>
+
 
 
         </section>
