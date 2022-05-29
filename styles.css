@@ -69,6 +69,7 @@ h3 {
 
 .titulos {
     font-family: 'BluuNext-Bold';
+    font-size: 20px;
 
 }
 
@@ -78,14 +79,9 @@ iframe {
     height: 30vw;
 }
 
-footer {
-    /* border: 3px skyblue solid; */
-    min-height: 50px;
-    margin: 1rem;
-    padding: 0.5rem;
-}
 
-#starwarspicture, #milliebobbypicture, #jasonsudeikis, #potterseries, #hogwartslegacy   {
+
+#starwarspicture, #milliebobbypicture, #jasonsudeikis, #potterseries, #hogwartslegacy, #publicidad  {
     width: 100%;
 
 
@@ -95,6 +91,8 @@ footer {
     
     flex-direction: column;
     justify-content: flex-start;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     
           
 }
@@ -125,4 +123,8 @@ form {
     color: white;
 
 
+}
+
+#publicidad {
+    display: block;
 }

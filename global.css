@@ -168,7 +168,7 @@ body {
     font-family: 'Rubik', sans-serif, Verdana, Geneva;
 
 }
-
+ 
 
 @font-face {
     font-family: 'Rubik';
@@ -204,3 +204,37 @@ main {
     display: flex;
     flex-wrap: wrap;
 }
+
+
+footer {
+    
+    min-height: 50px;
+    margin: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    background-color: rgb(122, 106, 144);
+    width: 100%;
+    
+
+}
+
+
+footer p {
+    align-self: center;
+  
+}
+
+#redessociales {
+    display: flex;
+    align-items: center;
+
+}
+
+#redessociales i {
+    width: 50px;
+    font-size: 25px;
+}
+
+
