@@ -7,186 +7,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./peliculas.css">
     <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="../suscripcion/suscripcion.css">
+
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/f2173fbf9c.js" crossorigin="anonymous"></script>
 
 </head>
-<link rel="icon" href="/imagenes/icon-wand.png" type="image/png" />
+<link rel="icon" href="/imagenes/film-solid.svg" type="image/png" />
 
 
 <body>
-    
-</head>
-<link  rel="icon"   href="./imagenes/icon-wand.png" type="image/png" />
-<body>
-    <header>
-        <h1>LOCOS POR EL CINE</h1>
-        
-    </header>
 
-    <nav>
-                <!-- <img src="/imagenes/Logo lujoso vintage dorado azul.jpg" alt="logo" width="100" height="100"> -->
-                <strong>
+    </head>
 
-                    <ul>
-                        <li><a href="/index.html">Inicio</a></li>
-                        <li><a href="/peliculas/index.html">Películas en cartelera</a></li>
-                        <li><a href="noticias.html">Noticias</a></li>
-                        <li><a href="./suscripcion/suscripcion.html">Suscripción</a></li>
-                        <li><a href="merchandising.html">Merchandising</a></li>
-                    </ul>
+    <body>
+        <header>
+            <h1>LOCOS POR EL CINE</h1>
 
+        </header>
 
-
-                
-         </strong>
+        <nav>
+            <!-- <img src="/imagenes/Logo lujoso vintage dorado azul.jpg" alt="logo" width="100" height="100"> -->
+            <strong>
+                <ul>
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/peliculas/index.html">Películas en cartelera</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
+                    <li><a href="./suscripcion/suscripcion.html">Suscripción</a></li>
+                    <li><a href="merchandising.html">Merchandising</a></li>
+                </ul>
+            </strong>
         </nav>
-    
-    
+        <main>
+            <div id="contenedorformulario">
+
+                <form id="formulario" action="Miapi.com" method="post" onsubmit="return validForm()">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" autofocus title="Nombre"
+                        placeholder="Ingresá tu nombre">
+                    <label id="nombreError"></label><br>
+
+                    <label for="apellido">Apellido: </label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Ingresá tu apellido" title="Apellido">
+                    <label id="apellidoError"></label><br>
 
 
-    <main>
+                    <label for="mail">E-mail:</label>
+                    <input type="email" name="mail" id="mail" placeholder="Ingresá tu dirección de E-mail"
+                        title="E-mail">
+                    <label id="mailError"></label><br>
 
-        <form id="formulario" action="Miapi.com" method="post" onsubmit="return validForm()">
-            <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" id="nombre" autofocus title="Nombre" placeholder="Ingresá tu nombre">
-            <label id="nombreError"></label><br>
-
-            <label for="apellido">Apellido: </label>
-            <input type="text" name="apellido" id="apellido" placeholder="Ingresá tu apellido" title="Apellido"> <label
-                id="apellidoError"></label><br>
-
-
-            <label for="mail">E-mail:</label>
-            <input type="email" name="mail" id="mail" placeholder="Ingresá tu dirección de E-mail" title="E-mail">
-            <label id="mailError"></label><br>
-
-            <label for="usuario">Usuario: </label>
-            <input type="text" name="usuario" id="usuario" placeholder="Ingresá un nombre de usuario" title="Usuario">
-            <label id="usuarioError"></label><br>
+                    <label for="usuario">Usuario: </label>
+                    <input type="text" name="usuario" id="usuario" placeholder="Ingresá un nombre de usuario"
+                        title="Usuario">
+                    <label id="usuarioError"></label><br>
 
 
-            <label for="contraseña">Contraseña</label>
-            <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingresá una contraseña"
-                title="Contraseña"> <label id="contraseniaError"></label>
-            <br>
+                    <label for="contraseña">Contraseña</label>
+                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingresá una contraseña"
+                        title="Contraseña"> <label id="contraseniaError"></label>
+                    <br>
+
+                    <input type="submit" value="Registrarse" onclick="EnviarFormulario">
+                    <input type="reset" value="Borrar datos">
+                </form>
+
+                <script>
+                    function fullFields() {
+                        let resultado = true;
+
+                        const formulario = document.getElementById('formulario')
+
+                        for (let element of formulario.children) {
+
+                            if (element.nodeName != 'INPUT') {
+                                continue
+                            }
+                            if (element.attributes.type.value === 'submit' || element.attributes.type.value === 'reset') {
+                                continue
+                            }
+
+                            if (element.value.length == 0) {
+                                const id = element.attributes.id.value
+                                document.getElementById(id + 'Error').innerHTML = 'Por favor, complete el campo'
+                                element.focus()
+                                resultado = false
+
+                            }
+                        }
 
 
 
-
-            <input type="submit" value="Enviar los datos" onclick="EnviarFormulario">
-            <input type="reset" value="Borrar">
-
-
-        </form>
-
-        <script>
-
-
-
-
-            function fullFields() {
-                let resultado = true;
-
-                const formulario = document.getElementById('formulario')
-
-                for (let element of formulario.children) {
-
-                    if (element.nodeName != 'INPUT') {
-                        continue
+                        return resultado
                     }
-                    if (element.attributes.type.value === 'submit' || element.attributes.type.value === 'reset') {
-                        continue
+
+                    const expressionMatch = () => {
+
+                        let resultado = true
+
+                        const regExp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+                        const mail = document.getElementById('mail').value
+
+                        if (!mail.toLowerCase().match(regExp)) {
+                            resultado = false
+                            document.getElementById("mailError").innerHTML = "Formato de email no válido";
+                        }
+
+                        return resultado
                     }
 
-                    if (element.value.length == 0) {
-                        const id = element.attributes.id.value
-                        document.getElementById(id + 'Error').innerHTML = 'Por favor, complete el campo'
-                        element.focus()
-                        resultado = false
-
+                    const validForm = () => {
+                        return fullFields() && expressionMatch()
                     }
-                }
-
-                // const nombre = document.getElementById("nombre").value;
-                // if (nombre.length == 0) {
-                //     document.getElementById("mensaje").innerHTML = "Por favor, completá este campo";
-                //     document.getElementById('nombre').focus();
-                //     resultado = false;
-                // }
-
-                // const apellido = document.getElementById("apellido").value;
-                // if (apellido.length == 0) {
-                //     document.getElementById("mensaje2").innerHTML = "Por favor, completá este campo";
-                //     document.getElementById('apellido').focus();
-                //     resultado = false;
-                // }
-
-                // const mail = document.getElementById("mail").value;
-                // if (mail.length == 0) {
-                //     document.getElementById("mensaje3").innerHTML = "Por favor, completá este campo";
-                //     document.getElementById('mail').focus();
-                //     resultado = false;
-                // }
-
-                // const usuario = document.getElementById("usuario").value;
-                // if (usuario.length == 0) {
-                //     document.getElementById("mensaje4").innerHTML = "Por favor, completá este campo";
-                //     document.getElementById('usuario').focus();
-                //     resultado = false;
-                // }
-
-                // const contraseña = document.getElementById("contraseña").value;
-                // if (contraseña.length == 0) {
-                //     document.getElementById("mensaje5").innerHTML = "Por favor, completá este campo";
-                //     document.getElementById('contraseña').focus();
-                //     resultado = false;
-                // }
-
-                return resultado
-            }
-
-            const expressionMatch = () => {
-
-                let resultado = true
-
-                const regExp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-                const mail = document.getElementById('mail').value
-
-                if (!mail.toLowerCase().match(regExp)) {
-                    resultado = false
-                    document.getElementById("mailError").innerHTML = "Formato de email no válido";
-                }
-
-                return resultado
-            }
-
-            const 
-
-            const validForm = () => {
-                return fullFields() && expressionMatch()
-            }
 
 
+                </script>
 
-            // if (condition) 
-            // false = false
-            // null = false
-            // 0 = false
-            // undefined = false
-            // '' = false // '' <> ' '
+            </div>
 
-            // -1  .  (x) = -x
-            // ! true = false
-            // ! false = true
+            <div id="contenedortexto">
+                <h2>¡Suscribite para recibir nuestra revista virtual todos los meses y <br> participar por entradas para
+                    avant premieres e increíble merchandising oficial! <br> </h2>
+                <h3>Luego de completar los campos requeridos, vas a recibir un mail con las instrucciones para completar
+                    la suscripción.</h3>
+                <img src="/imagenes/2.jpg" alt="Black Widow" width="20%" height="30%">
 
-            // 5 es diferente de '5' o "5"
-            // 5 === '5' || "5" = false
-            // 5 == '5' || "5" = true 
-        </script>
-    </main>
-    <footer>
-    </footer>
-</body>
 
+            </div>
+
+            <footer>
+                <p>© Locos por el cine 2022 - Cine y Series - Desarrollado por Sol Vasquez (solvsqz@gmail.com)</p>
+                <div id="redessociales">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </footer>
+
+        </main>
+    </body>
 </html>

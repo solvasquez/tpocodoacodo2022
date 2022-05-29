@@ -1,0 +1,44 @@
+
+@font-face {
+    font-family: 'Rubik';
+    src: url(./fonts/Rubik-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'BluuNext-Bold';
+    src: url(./fonts/BluuNext-Bold.woff2) format('woff2');
+}
+
+
+
+form {
+
+    font-family: "BluuNext-Bold"
+}
+
+form label {
+    padding: 15px 0px 15px 0px;
+}
+
+form input{
+    margin: 20px;
+}
+
+footer {
+    margin: 232px 0px 0px 0px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#contenedorformulario {
+    flex: 1;
+}
+
+#contenedortexto {
+    flex: 2;
+}
