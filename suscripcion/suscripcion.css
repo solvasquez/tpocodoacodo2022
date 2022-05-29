@@ -62,9 +62,14 @@ main {
         transform:scale(4,4);
         -webkit-transform:scale(4,4);
         -ms-transform:scale(4,4);
-          
+           
      }
+
+
+
 }
+
+
 
 @media (max-width: 600px) {
 
