@@ -41,4 +41,39 @@ main {
 
 #contenedortexto {
     flex: 2;
+
+    
+}
+
+#contenedortexto img:hover {
+
+    transform:scale(2,2);
+	-webkit-transform:scale(2,2);
+	-ms-transform:scale(2,2);
+	
+
+}
+
+
+ @media (max-width: 768px) {
+
+    #contenedortexto img:hover {
+
+        transform:scale(4,4);
+        -webkit-transform:scale(4,4);
+        -ms-transform:scale(4,4);
+          
+     }
+}
+
+@media (max-width: 600px) {
+
+    #contenedortexto img:hover {
+
+        transform:scale(5,5);
+        -webkit-transform:scale(5,5);
+        -ms-transform:scale(5,5);
+          
+     }
+
 }

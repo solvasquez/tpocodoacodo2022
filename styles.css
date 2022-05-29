@@ -1,38 +1,42 @@
 
+@font-face {
+    font-family: 'Rubik';
+    src: url(./fonts/Rubik-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'BluuNext-Bold';
+    src: url(./fonts/BluuNext-Bold.woff2) format('woff2');
+}
 
 
+
+body {
+    font-family:'BluuNext-Bold';
+}
 h3 {
     font-family: 'BluuNext-Bold';
     font-size: 1.8em;
 }
 
  
-/* main>div {
-    min-height: 180;
-    margin: 1rem;
-    border: 2px violet solid; */
-/* se puede referenciar el div también de esta forma por
-    ser hijo directo del main */
 
 .contenido-principal {
     min-height: 50px;
     margin: 0.5rem;
-    /* border: 2px violet solid; */
     height: auto;
     float: left;
     width: 80vw;
     min-width: 65vmin;
     flex: 5;
     box-sizing: border-box;
-    /* flex-wrap: wrap; */
-    /* display: flex; */
+    
     
 }
 
 .secciones {
     min-height: 50px;
     margin: 0.5rem;
-    /* border: 2px orange solid; */
     padding: 1rem;
 
 }
@@ -40,7 +44,6 @@ h3 {
 .articulos {
     min-height: 20px;
     margin: 0.30rem;
-    /* border: 1px green dotted; */
     padding: 0.5rem;
     overflow: auto;
 
@@ -49,7 +52,6 @@ h3 {
 .texto-lateral {
     min-height: 50px;
     margin: 0.5rem;
-    /* border: 2px cornflowerblue solid; */
     padding: 1rem;
     min-width: 25%;
     width: 20vw;
@@ -81,7 +83,7 @@ iframe {
 
 
 
-#starwarspicture, #milliebobbypicture, #jasonsudeikis, #potterseries, #hogwartslegacy, #publihbo  {
+#starwarspicture, #milliebobbypicture, #jasonsudeikis, #potterseries, #hogwartslegacy, #publihbo, #cannes  {
     width: 100%;
 
 
@@ -93,8 +95,13 @@ iframe {
     justify-content: flex-start;
     margin-top: 2rem;
     margin-bottom: 2rem;
+   
+  
+}
+
+#pub {
     
-          
+    margin-bottom: 4.5rem;
 }
 
 #articulopartido {
@@ -123,4 +130,15 @@ form {
     color: white;
 
 
+}
+
+@media (max-width: 859px) {
+    #pub {
+        margin-bottom: 8rem;
+    }
+
+      }
+
+#noticiaclickeable:hover {
+    background-color:rgb(209, 215, 170) ;
 }

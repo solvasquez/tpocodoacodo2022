@@ -13,17 +13,13 @@
 html {
     font-size: 1rem;
     height: 100%;
-    /*que todo el doc html aplique ese tamaño y 
-     la altura sea el 100% de su contenedor */
     min-width: none;
-    /* acá podría decirle que no se achique menos de tantos
-     px, al achicar la pantalla */
 
 }
 
 
 main{
-    /* width: 90%; */
+    
     display: flex;
     flex-wrap: wrap;    
     justify-content:space-around;
@@ -50,8 +46,10 @@ main{
     height:35rem;
     margin: 15px;
     
-    
+   
 }
+
+
 
 .tarjeta p{
     width: 160px;
@@ -87,12 +85,5 @@ main{
 }
 
 
-/* 
-footer {
-    border: 3px skyblue solid;
-    min-height: 50px;
-    margin: 1rem;
-    padding: 0.5rem;
-} */
 
 
